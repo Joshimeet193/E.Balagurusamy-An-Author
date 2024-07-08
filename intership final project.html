@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E. Balagurusamy - Author</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #ff6347, orange); /* Red to orange gradient */
+      color: #343a40; /* Dark gray text */
+      padding-top: 70px; /* Adjust for fixed navbar */
+	  margin-bottom: 100px;
+    }
+    .hidden {
+      display: none;
+    }
+    .jumbotron {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE-5loYGSQrbKMpQ4mTFWnGOI0GuQAoUkOgA&s');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Adjusted min-height for smaller screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+    /* General Navbar Styling */
+.navbar {
+  background-color: #343a40;
+  padding: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ffffff;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffffff;
+  background-color: #007bff; /* Change background color on hover */
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Active Link Styling */
+.navbar-nav .nav-item .nav-link.active {
+  color: #ffffff;
+  background-color: #007bff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.review-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.review-section h2 {
+  margin-bottom: 20px;
+}
+
+#averageRating {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.reviews-list {
+  margin-top: 20px;
+}
+.footer {
+  position: fixed; /* Keep the footer fixed at the bottom */
+  width: 100%;
+  bottom: 0;
+  background-color: #343a40; /* Adjust background color if needed */
+  color: #ffffff; /* Adjust text color if needed */
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+/* Home Page Background */
+#home {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE-5loYGSQrbKMpQ4mTFWnGOI0GuQAoUkOgA&s');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  color: #ffffff; /* White text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* About Page Background */
+#about {
+  background: linear-gradient(to right, #ff6347, orange); /* Red to orange gradient */
+  padding: 40px 0;
+}
+
+/* Books Page Background */
+#books {
+  background: linear-gradient(to right, orange, #ff6347 ); /* Orange to Red gradient */
+  padding: 40px 0;
+}
+
+/* Contact Page Background */
+#contact {
+  background: linear-gradient(to right, #ff6347, orange); /* Red to orange gradient */
+  padding: 40px 0;
+}
+  </style>
+</head>
+
+<body>
+   <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home" onclick="showPage('home')">E. Balagurusamy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home" onclick="showPage('home')">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" onclick="showPage('about')">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#books" onclick="showPage('books')">Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" onclick="showPage('contact')">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Home Page Content -->
+  <div id="home" class="page">
+    <div class="jumbotron">
+      <div>
+        <h1 class="display-4"><marquee behavior="" direction=""><font color="blue"> Welcome to E. Balagurusamy's Author Website</font></marquee></h1>
+        <p class="lead"><font color="blue">Explore his works and contributions in computer science education.</font></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Page Content -->
+  <div id="about" class="page">
+    <div class="container">
+      <div class="about-section">
+        <div class="section-heading"><h2>About E. Balagurusamy</h2></div>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Erukulla Balagurusamy, born on January 2, 1949, in Namakkal, Tamil Nadu, India, is a distinguished Indian academician, author, and former Member of Parliament (Rajya Sabha). He is renowned for his significant contributions to computer science education and programming languages.</p>
+            <p>Balagurusamy began his career in academia and quickly rose to prominence as a visionary leader in technical education. He served as the Vice Chancellor of Anna University, Chennai, from 2001 to 2006, where he implemented innovative reforms and initiatives that transformed the university's curriculum and research landscape.</p>
+            <p>One of his most notable achievements was the development of NEPC (Network Enabled Programming Construct), India's first indigenous programming language designed to facilitate software development in regional languages. This initiative underscored his commitment to bridging the digital divide and promoting inclusive technological advancements across India.</p>
+            <p>In addition to his academic achievements, Balagurusamy has authored numerous textbooks on computer science and programming that are widely used in educational institutions. His books are known for their clarity, comprehensiveness, and practical approach, making complex concepts accessible to students and professionals alike.</p>
+            <p>Balagurusamy's contributions to education and technology have earned him several prestigious awards and recognitions over the years. Here are some of the notable awards he has received:</p>
+            <ul>
+              <li><strong>Padma Shri</strong> - 2002</li>
+              <li><strong>Life Time Achievement Award</strong> - 2006, from the Indian Society for Technical Education (ISTE)</li>
+              <li><strong>Distinguished Alumnus Award</strong> - 2010, from the Indian Institute of Technology, Roorkee</li>
+              <li><strong>Lifetime Achievement Award</strong> - 2012, from the Computer Society of India (CSI)</li>
+              <li><strong>Dr. P. S. Deshmukh Memorial Award</strong> - 2015, for outstanding contributions to technical education in India</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN825J2tw7fPhVPQqjQFiDvr6fY9qUFHEbGw&s" class="img-fluid" alt="E. Balagurusamy">
+            <img src="https://www.lotustimes.org/wp-content/uploads/2023/02/balaguruswammi_photo.jpg" class="img-fluid" alt="E. Balagurusamy">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfNtmV9922RuJLTGJnkZq74ijC1ksxO3IcA&s" class="img-fluid" alt="E. Balagurusamy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Books Page Content -->
+  <div id="books" class="page">
+    <div class="container page-content">
+      <h2>Books</h2>
+      <p>This section lists the titles authored by E. Balagurusamy, complete with descriptions, publication details, and links to purchase or access these works. This section is crucial for students, educators, and professionals seeking authoritative resources in computer science.</p>
+      
+      <!-- Carousel for Main Books -->
+      <div id="bookCarousel" class="carousel slide mb-5" data-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Book 1: Programming in ANSI C -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4">
+                <img class="img-fluid rounded carousel-img" src="https://m.media-amazon.com/images/I/81W8e5V1jXL.AC_UF1000,1000_QL80_.jpg" alt="Programming in ANSI C">
+              </div>
+              <div class="col-md-8">
+                <div class="book-details">
+                  <h3>Programming in ANSI C</h3>
+                  <p>Programming in ANSI C by E. Balagurusamy is a comprehensive guide that introduces students to the basics of the C programming language. It covers topics such as data types, control structures, functions, arrays, pointers, and more. This book is widely used in academic institutions for its clear explanations and practical examples, making it suitable for beginners and advanced learners alike.</p>
+                  <p>Publication Year: 1992</p>
+                  <a href="https://amzn.in/d/0j7XtAKi" class="btn btn-primary">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Book 2: Programming in Java -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                <img class="img-fluid rounded carousel-img" src="https://m.media-amazon.com/images/I/51xiwRkS2oL.AC_UF1000,1000_QL80.jpg" alt="Programming in Java">
+              </div>
+              <div class="col-md-8">
+                <div class="book-details">
+                  <h3>Programming in Java</h3>
+                  <p>Programming in Java by E. Balagurusamy is a comprehensive guide that introduces students to the basics of Java programming language. It covers topics such as data types, control structures, functions, arrays, pointers, and more. This book is widely used in academic institutions for its clear explanations and practical examples, making it suitable for beginners and advanced learners alike.</p>
+                  <p>Publication Year: 1998</p>
+                  <a href="https://amzn.in/d/0igmgL3J" class="btn btn-primary">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Book 3: Object-Oriented Programming with C++ -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                <img class="img-fluid rounded carousel-img" src="https://rukminim2.flixcart.com/image/750/900/xif0q/book/v/x/r/-original-imahfptjc7ze7th3.jpeg?q=20&crop=false " alt="Object-Oriented Programming with C++">
+              </div>
+              <div class="col-md-8">
+                <div class="book-details">
+                  <h3>Object-Oriented Programming with C++</h3>
+                  <p>Object-Oriented Programming with C++ by E. Balagurusamy is a comprehensive guide that introduces students to the basics of C++ programming language. It covers topics such as data types, control structures, functions, arrays, pointers, and more. This book is widely used in academic institutions for its clear explanations and practical examples, making it suitable for beginners and advanced learners alike.</p>
+                  <p>Publication Year: 1990</p>
+                  <a href="https://amzn.in/d/03oq0lic" class="btn btn-primary">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#bookCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#bookCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Page Content -->
+<div id="contact" class="page">
+  <div class="container page-content">
+    <h2>Contact</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Get in touch with us by filling out the form below:</p>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3708.503305319805!2d69.65113697389639!3d21.644270166356566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395634c4e4d01da5%3A0xd7c395f74e89053d!2sGovt.%20Polytechnic%20Porbandar%2C%20Dut%20Sai%20Nagar%2C%20Porbandar%2C%20Gujarat%20360578!5e0!3m2!1sen!2sin!4v1720365686003!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-5">
+    <p class="text-start"><h1>Developed by:</h1></p>
+	<p>Name:- Joshi Meet Jayeshbhai</p>
+	<p>Enrollment Number:- 236270307032</p>
+  </div>
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2024 E. Balagurusamy. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- JavaScript and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Function to show/hide pages based on navbar click
+    function showPage(pageId) {
+      // Hide all pages
+      document.querySelectorAll('.page').forEach(function(page) {
+        page.classList.add('hidden');
+      });
+      // Show the selected page
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+</script>
+
+</body>
